@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_material_light"
+    android:orientation="vertical">
+    <!--android.support.v7.widget.-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/demo_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="3dp"
+        app:subtitle="@string/refresh"
+        app:title="@string/hello_world" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drwaer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <FrameLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/add_button"
+                android:layout_width="@dimen/round_button_diameter"
+                android:layout_height="@dimen/round_button_diameter"
+                android:layout_gravity="end|bottom"
+                android:tint="@android:color/white"
+                android:background="@drawable/oval_ripple"
+                android:elevation="@dimen/elevation_low"
+                android:stateListAnimator="@anim/button_elevation"
+                android:layout_marginBottom="@dimen/add_button_margin"
+                android:layout_marginRight="@dimen/add_button_margin"
+                android:src="@android:drawable/ic_input_add"/>
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="start"
+            android:background="@android:color/white"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hello"
+                />
+
+            </RelativeLayout>
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.practice.justkeep" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher1"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.practice.justkeep.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".uncaughtexceptionehandler.TextUnCaughtExceptionHandler"
+            android:label="@string/UnCaughtExceptionHandler">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.practice.justkeep.simple.code" />
+            </intent-filter>
+            </activity>
+        <activity android:name=".notification.TestNotificationActivity"
+            android:label="@string/TextNotification">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.practice.justkeep.simple.code" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".gzip.TestGzipActivity"
+        android:label="@string/TextGzip">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="com.practice.justkeep.simple.code" />
+        </intent-filter>
+    </activity>
+        <activity android:name=".popwindow.PopWindowActivity"
+            android:label="@string/TextPoppuWindow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.practice.justkeep.simple.code" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".pullrefresh.TestPullRefreshActivity"
+            android:theme="@style/AppTheme"
+            android:icon="@drawable/ic_launcher1"
+            android:label="@string/TextPullRefresh">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.practice.justkeep.simple.code" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".toolbar.ToolBarActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:icon="@drawable/ic_launcher1"
+            android:label="@string/TextToolBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.practice.justkeep.simple.code" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".viewpager.TestViewPagerActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:icon="@drawable/ic_launcher1"
+            android:label="@string/TextViewPager">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.practice.justkeep.simple.code" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ViewTreeObserver.TestViewTreeObserverActivtiy"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:icon="@drawable/ic_launcher1"
+            android:label="@string/TextViewTreeObserver">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.practice.justkeep.simple.code" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".matrix.MatrixActivity"
+            android:icon="@drawable/ic_launcher1"
+            android:label="@string/TextMatrix">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.practice.justkeep.simple.code" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".overviewscreen.DocumentCentricActivity"
+            android:icon="@drawable/ic_launcher1"
+            android:label="@string/TextOverviewScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.practice.justkeep.simple.code" />
+            </intent-filter>
+        </activity>
+
+
+
+
+        <activity android:name=".overviewscreen.NewDocumentActivity" android:label="NewDocumentActivity"
+            />
+
+
+
+
+        <activity android:name=".overviewscreen.TestOverviewScreenActivity"  android:label="TestOverviewScreenActivity"
+            />
+        <activity android:name=".overviewscreen.TestOverviewScreenActivity2" android:label="TestOverviewScreenActivity2"
+            />
+
+        <activity android:name=".uncaughtexceptionehandler.OtherActivity"
+            android:label="OtherActivity"/>
+        <activity android:name=".uncaughtexceptionehandler.TestOtherActvity"
+            android:label="TestOtherActvity"/>
+
+
+        <service android:name=".uncaughtexceptionehandler.TestService"/>
+    </application>
+
+</manifest>

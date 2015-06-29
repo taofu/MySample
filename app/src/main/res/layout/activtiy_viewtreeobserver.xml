@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/group"
+    android:layout_height="match_parent">
+
+
+    <com.practice.justkeep.ViewTreeObserver.TestView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/parent"
+        >
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:text="删除自己"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            />
+        <Button
+            android:id="@+id/delete_parent"
+            android:layout_width="wrap_content"
+            android:text="删除Parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:onClick="onClick"
+            />
+        <Button
+            android:id="@+id/visible_parent"
+            android:layout_width="wrap_content"
+            android:text="设置ParentVisible"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:onClick="onClick"
+            />
+        <Button
+            android:id="@+id/visible_self"
+            android:layout_width="wrap_content"
+            android:text="设置自己Visible"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:onClick="onClick"
+            />
+
+        </com.practice.justkeep.ViewTreeObserver.TestView>
+
+    <RelativeLayout
+        android:id="@+id/other"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/parent"
+        android:background="#00f0f0"
+        android:layout_height="50dp">
+
+
+        </RelativeLayout>
+</RelativeLayout>

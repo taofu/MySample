@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="globalTextColorBlack" format="color"/>
+    <attr name="globalTextColorWhite" format="color"/>
+    <style name="Base.AppTheme.Toolbar" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="globalTextColorBlack">#a4a4a4</item>
+        <item name="globalTextColorWhite">@android:color/white</item>
+        <!--actionBar 的颜色-->
+        <item name="colorPrimary">@color/accent_material_light</item>
+        <!--状态栏的颜色 5.0 或者以后的设备支持-->
+        <item name="colorPrimaryDark">@color/accent_material_light</item>
+        <!--设置ToolBar 最左边的button的样式-->
+        <item name="toolbarNavigationButtonStyle">@style/MyToolbarNavigationButtonStyle</item>
+        <!--设置ToolBar 的样式-->
+        <item name="toolbarStyle">@style/MyToolBarStyle</item>
+        <item name="actionMenuTextColor">?attr/globalTextColorWhite</item>
+        <item name="actionOverflowButtonStyle">@style/MyActionOverflowButtonStyle</item>
+        
+        <item name="drawerArrowStyle">@style/MyDrawerStyle</item>
+    </style>
+    >
+    <!--
+      设置toolbar 最左边的按钮的样式，如果重新设置了background 那在5.0 以后的手机上就没有按下水波的效果，默认是有的.
+
+      android:background="?android:attr/selectableItemBackground"波纹有边界(默认样式)
+      android:background="?android:attr/selectableItemBackgroundBorderless"波纹超出边界
+
+      如果要改变背景和波纹颜色，可以用如下 （注意：如下代码只能用于 AppTheme.NoActionBar 里面，否则无效）：
+
+      android:colorControlHighlight：设置波纹颜色，
+
+      android:colorAccent：设置checkbox等控件的选中颜色
+
+      -->
+    <style name="MyToolbarNavigationButtonStyle" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingLeft">@dimen/abc_action_bar_icon_vertical_padding_material</item>
+        <item name="android:paddingRight">@dimen/abc_action_bar_icon_vertical_padding_material</item>
+    </style>
+
+
+    <!-- 设置 ToolBar 的样式-->
+    <style name="MyToolBarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">@style/ToolBarTitleTextStyle</item>
+        <item name="subtitleTextAppearance">@style/ToolBarSubTitleTextStyle</item>
+        <item name="contentInsetStart">0dp</item>
+    </style>
+
+    <!-- 设置 ToolBar Title的样式-->
+    <style name="ToolBarTitleTextStyle" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <!-- 设置title 字体大小和颜色-->
+        <item name="android:textSize">@dimen/abc_text_size_title_material_toolbar</item>
+        <item name="android:textColor">?attr/globalTextColorWhite</item>
+    </style>
+
+    <!-- 设置 ToolBar Title的样式-->
+    <style name="ToolBarSubTitleTextStyle" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <!-- 设置 sub title 字体大小和颜色-->
+        <item name="android:textSize">@dimen/abc_text_size_subtitle_material_toolbar</item>
+        <item name="android:textColor">?attr/globalTextColorWhite</item>
+    </style>
+    <!-- 设置 actionbar OverflowButton 的样式，Toolbar 里面的 OverflowButton 也适用-->
+    <style name="MyActionOverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+       <item name="android:src">@drawable/ic_men_moreoverflow_shadow</item>
+    </style>
+    
+<style name="MyDrawerStyle" parent="Base.Widget.AppCompat.DrawerArrowToggle">
+    <item name="color">?attr/globalTextColorWhite</item>
+</style>
+</resources>

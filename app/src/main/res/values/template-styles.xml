@@ -1,0 +1,103 @@
+<!--
+  Copyright 2013 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+
+    <!-- Activity themes -->
+
+    <style name="Theme.Base" parent="android:Theme" />
+
+    <style name="Theme.Sample" parent="Theme.Base" />
+
+    <style name="AppTheme" parent="Theme.Sample" />
+    <!-- Widget styling -->
+
+    <style name="AppTheme.NoActionBar" parent="Base.AppTheme.Toolbar">
+        <item name="toolbarNavigationButtonStyle">@style/MyToolbarNavigationButtonStyle.PreL</item>
+
+        <item name="actionButtonStyle">@style/MyActionButtonStyle</item>
+        <item name="actionOverflowButtonStyle">@style/MyActionOverflowButtonStyle.PreL</item>
+    </style>
+
+    <style name="MyToolbarNavigationButtonStyle.PreL" parent="MyToolbarNavigationButtonStyle">
+        <item name="android:background">@drawable/toolbar_selector</item>
+    </style>
+
+    <!-- 设置 actionbar menu 的样式，Toolbar 里面的menu 也适用-->
+    <style name="MyActionButtonStyle" parent="Widget.AppCompat.ActionButton">
+        <item name="android:background">@drawable/toolbar_selector</item>
+    </style>
+
+    <style name="MyActionOverflowButtonStyle.PreL" parent="MyActionOverflowButtonStyle">
+        <item name="android:background">@drawable/toolbar_selector</item>
+    </style>
+
+<!--     <style name="MyToolBarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="android:titleTextAppearance">@style/ToolBarTitleTextStyle</item>
+         <item name="titleTextAppearance">@style/ToolBarTitleTextStyle</item>
+
+    </style>
+
+    <style name="MyToolbarNavigationButtonStyle" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+        &lt;!&ndash;
+        设置toolbar 最最嘴边的按钮的样式，如果重新设置了background 那在5.0 以后的手机上就没有按下水波的效果，默认是有的.
+
+        android:background="?android:attr/selectableItemBackground"波纹有边界(默认样式)
+        android:background="?android:attr/selectableItemBackgroundBorderless"波纹超出边界
+
+        如果要改变背景和波纹颜色，可以用如下 （注意：如下代码只能用于 AppTheme.NoActionBar 里面，否则无效）：
+
+        android:colorControlHighlight：设置波纹颜色，
+
+        android:colorAccent：设置checkbox等控件的选中颜色
+
+        &ndash;&gt;
+        <item name="android:minWidth">0dp</item>
+        <item name="android:padding">0dp</item>
+       &lt;!&ndash; <item name="android:background">@drawable/toolbar_selector</item>&ndash;&gt;
+    </style>
+
+    <style name="MyActionButtonStyle" parent="Widget.AppCompat.ActionButton">
+        <item name="android:background">@drawable/toolbar_selector</item>
+    </style>
+
+    <style name="MyActionOverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:background">@drawable/toolbar_selector</item>
+        <item name="android:src">@drawable/abc_ic_menu_moreoverflow_mtrl_alpha</item>
+    </style>
+
+
+    <style name="ToolBarTitleTextStyle" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">23dp</item>
+        <item name="android:textColor">#0000ff</item>
+
+
+    </style>-->
+    <style name="Widget" />
+
+    <style name="Widget.SampleMessage">
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+    </style>
+
+    <style name="Widget.SampleMessageTile">
+        <item name="android:background">@drawable/tile</item>
+        <item name="android:shadowColor">#7F000000</item>
+        <item name="android:shadowDy">-3.5</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+</resources>
